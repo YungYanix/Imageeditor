@@ -1,4 +1,4 @@
-import os
+йimport os
 from matplotlib import pyplot as plt
 import numpy as np
 import streamlit as st

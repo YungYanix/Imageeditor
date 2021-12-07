@@ -47,6 +47,12 @@ if state['image'] is not None:
         adjust_hsv(state, st.sidebar)
         main_block.info('More info on HSV colorspace: https://ru.wikipedia.org/wiki/HSV_(%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2%D0%B0%D1%8F_%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C)')
 
+    if st.sidebar.checkbox('Crop', value=True):
+        crop(state, st.sidebar)
+
+    if st.sidebar.checkbox('Rgb channels', value = True):
+        rgb_channels(state, st.sidebar)
+
     main_block.pyplot(render_image(state['image']))
     download_image(state, st.sidebar)
 
